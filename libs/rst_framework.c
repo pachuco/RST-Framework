@@ -93,6 +93,8 @@ void* main(hostCallback HostCallback){ // New plug instances is created here. Af
 	};
 	#if TYPE_OF_PLUG == EFFECT_UNIT
 		myplugin.number_of_inputs = 2; // audio inputs
+	#elif TYPE_OF_PLUG == SYNTHESIZER
+		myplugin.flags |= hasSynth;
 	#endif
 	#ifndef NO_GUI
 		myplugin.flags |= hasEditor;
